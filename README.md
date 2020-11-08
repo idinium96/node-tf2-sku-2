@@ -1,4 +1,4 @@
-# node-tf2-sku
+# node-tf2-sku-2
 
 Format items as strings or objects
 
