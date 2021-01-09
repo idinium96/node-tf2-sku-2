@@ -7,16 +7,17 @@ const TEMPLATE = {
     craftable: true,
     killstreak: 0,
     australium: false,
-    festive: false,
     effect: null,
+    festive: false,
     paintkit: null,
     wear: null,
     quality2: null,
-    target: null,
     craftnumber: null,
     crateseries: null,
+    target: null,
     output: null,
-    outputQuality: null
+    outputQuality: null,
+    paint: null
 };
 
 /**
@@ -76,6 +77,8 @@ class SKU {
                 attributes.output = parseInt(attribute.substring(2));
             } else if (attribute.startsWith('oq') && isNum(attribute.substring(2))) {
                 attributes.outputQuality = parseInt(attribute.substring(2));
+            } else if (attribute.startsWith('p') && isNum(attribute.substring(1))) {
+                attributes.paint = parseInt(attribute.substring(1));
             }
         }
 
@@ -132,6 +135,9 @@ class SKU {
         }
         if (item.outputQuality) {
             sku += `;oq-${item.outputQuality}`;
+        }
+        if (item.paint) {
+            sku += `;p${item.paint}`;
         }
 
         return sku;
