@@ -49,7 +49,9 @@ class SKU {
             parts.shift();
         }
 
-        for (let i = 0; i < partsCount; i++) {
+        const partsAdjustedCount = parts.length;
+
+        for (let i = 0; i < partsAdjustedCount; i++) {
             const attribute = parts[i].replace('-', '');
 
             if (attribute === 'uncraftable') {
