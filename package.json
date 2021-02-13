@@ -1,6 +1,6 @@
 {
   "name": "tf2-sku-2",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Format items as strings or objects, originally made by Nicklason, modified by IdiNium.",
   "main": "index.js",
   "scripts": {
