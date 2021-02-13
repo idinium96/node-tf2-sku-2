@@ -33,22 +33,23 @@ class SKU {
         const attributes = {};
 
         const parts = sku.split(';');
+        const partsCount = parts.length;
 
-        if (parts.length > 0) {
+        if (partsCount > 0) {
             if (isNum(parts[0])) {
                 attributes.defindex = parseInt(parts[0]);
             }
             parts.shift();
         }
 
-        if (parts.length > 0) {
+        if (partsCount > 0) {
             if (isNum(parts[0])) {
                 attributes.quality = parseInt(parts[0]);
             }
             parts.shift();
         }
 
-        for (let i = 0; i < parts.length; i++) {
+        for (let i = 0; i < partsCount; i++) {
             const attribute = parts[i].replace('-', '');
 
             if (attribute === 'uncraftable') {
