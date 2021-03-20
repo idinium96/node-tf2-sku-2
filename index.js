@@ -5,7 +5,7 @@ const TEMPLATE = {
     defindex: 0,
     quality: 0,
     craftable: true,
-    tradeable: true,
+    tradable: true,
     killstreak: 0,
     australium: false,
     effect: null,
@@ -58,7 +58,7 @@ class SKU {
             if (attribute === 'uncraftable') {
                 attributes.craftable = false;
             } else if (['untradeable', 'untradable'].includes(attribute)) {
-                attributes.tradeable = false;
+                attributes.tradable = false;
             } else if (attribute === 'australium') {
                 attributes.australium = true;
             } else if (attribute === 'festive') {
@@ -112,8 +112,8 @@ class SKU {
         if (item.craftable === false) {
             sku += ';uncraftable';
         }
-        if (item.tradeable === false) {
-            sku += ';untradeable';
+        if (item.tradable === false) {
+            sku += ';untradable';
         }
         if (item.wear) {
             sku += `;w${item.wear}`;
