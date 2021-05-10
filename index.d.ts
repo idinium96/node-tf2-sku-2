@@ -1,5 +1,5 @@
-declare module 'tf2-sku-2' {
-    export function fromObject(item: {
+export default class SKU {
+    static fromObject(item: {
         defindex: number;
         quality: number;
         craftable?: boolean;
@@ -18,8 +18,7 @@ declare module 'tf2-sku-2' {
         outputQuality?: number;
         paint?: number;
     }): string;
-
-    export function fromString(
+    static fromString(
         sku: string
     ): {
         defindex: number;
