@@ -118,7 +118,7 @@ class SKU {
         if (item.wear) {
             sku += `;w${item.wear}`;
         }
-        if (item.paintkit) {
+        if (typeof item.paintkit === 'number') {
             sku += `;pk${item.paintkit}`;
         }
         if (item.quality2 == 11) {
