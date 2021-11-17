@@ -1,3 +1,5 @@
+Archived - Please use @tf2autobot/tf2-sku module
+
 # node-tf2-sku-2
 
 Format items as strings or objects
